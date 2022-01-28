@@ -1,0 +1,17 @@
+.card {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 3%;
+}
+
+.farm-content {
+  border: 1px solid var(--surface-d);
+  border-radius: 3px;
+  margin: .3rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+.title {
+  margin: 30px 70px 0px;
+  color: green;
+}

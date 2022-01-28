@@ -1,0 +1,25 @@
+<p-card class="card">
+  <ng-template pTemplate="header">
+    <div class="title">
+      <h1>Fazendas</h1>
+    </div>
+  </ng-template>
+  <hr>
+  <p-carousel [circular]="false" [numScroll]="3" [numVisible]="3" [responsiveOptions]="responsiveOptions"
+              [value]="farms">
+    <ng-template let-farms pTemplate="item">
+      <div class="farm">
+        <div class="farm-content">
+          <div class="mb-3">
+            <img [alt]="farms.nameFarm" class="product-image" height="200" src="assets/fazendas/{{farms.image}}" width="300">
+          </div>
+          <div>
+            <h4 class="mb-1">{{farms.nameFarm}}</h4>
+            <h6 class="mt-2 mb-3">Tipo da lavoura: <span style="color: green">{{farms.tillage}}</span></h6>
+          </div>
+          <button pButton pRipple type="button" label="Talhões" class="p-button-rounded p-button-success" routerLink="/fazendas/{{farms.id}}/talhoes"></button>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</p-card>

@@ -1,0 +1,62 @@
+<div class="button-talhoes">
+  <button (click)="op.toggle($event)" class="p-button-raised p-button-success" icon="pi pi-plus" label="Talhões" pButton
+          pRipple
+          type="button"></button>
+</div>
+<p-card class="card">
+  <ng-template pTemplate="header">
+    <div class="title">
+      <h2>Talhões da {{plots[0]?.nameFarm.toLowerCase()}}</h2>
+    </div>
+  </ng-template>
+  <hr>
+  <div class="nada-pesquisado" *ngIf="plots[0]?.plots.length === 0">
+    <img [alt]="'vaca'" height="200" src="assets/vaca.jpg" width="400">
+    <p><strong>Nenhum talhão registrado</strong></p>
+  </div>
+  <div *ngIf="plots[0]?.plots.length > 0">
+    <div  *ngFor="let plots of plots[0]?.plots" >
+      <p-card class="card">
+        <ng-template pTemplate="header">
+          <div class="title">
+            <h4>{{plots.namePlots}}</h4>
+          </div>
+        </ng-template>
+        <div class="container d-flex">
+          <img [alt]="plots.namePlots" height="100" src="assets/talhoes/{{plots.image}}" width="100">
+          <span class="plots-fields" *ngFor="let productivy of plots?.productivityRegisters let i=index">
+            <input class="col-3" id="variedade" pInputText placeholder="Variedade" type="Variedades" [value]="productivy?.varieties">
+            <input class="col-3" id="area" pInputText placeholder="area" style="margin-left: 20px"
+                   type="username" [value]="productivy?.area">
+            <input class="col-3" id="produtividade" pInputText placeholder="produtividade"
+                   style="margin-left: 20px" type="username" [value]="productivy?.productivity">&nbsp;
+
+            <button class="p-button-rounded p-button-success" icon="pi pi-plus" (click)="addProductivityRegisters(i)" pButton pRipple type="button"></button>&nbsp;
+            <button class="p-button-rounded p-button-danger" icon="pi pi-trash" (click)="removePlots(plots)" pButton pRipple type="button"></button>
+          </span>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</p-card>
+
+<p-overlayPanel #op>
+  <ng-template pTemplate>
+    <form [formGroup]="form">
+      <div class="p-field">
+        <label for="namePlots" class="col-12"><strong>Nome do talhão</strong></label>
+        <input id="namePlots" class="col-12" placeholder="Nome do talhão" type="username" formControlName="namePlots" pInputText >
+      </div>
+      <div class="p-field">
+        <label for="areaPlots" class="col-12 mt-2"><strong>Área do talhão</strong></label>
+        <input id="areaPlots"  class="col-12" placeholder="Área do talhão" type="number" formControlName="areaPlots" pInputText >
+      </div>
+      <button (click)="save()" class="p-button-raised p-button-success mt-2 col-12"  iconPos="right" icon="pi pi-check" label="Salvar talhão" pButton
+              pRipple
+              type="button"></button>
+    </form>
+  </ng-template>
+</p-overlayPanel>
+<pre>
+  {{plots[0]?.plots | json}}
+</pre>

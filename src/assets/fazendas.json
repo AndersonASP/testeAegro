@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": "1000",
+      "code": "f230fh0g3",
+      "nameFarm": "Fazenda são marcelo",
+      "description": "Product Description",
+      "image": "talhao2.jpg",
+      "tillage": "milho",
+      "plots" : [
+
+      ]
+    },
+    {
+      "id": "1001",
+      "code": "nvklal433",
+      "nameFarm": "Fazenda roncador",
+      "description": "Product Description",
+      "image": "talhao1.jpg",
+      "tillage": "soja",
+      "plots" : [
+
+      ]
+    },
+    {
+      "id": "1002",
+      "code": "zz21cz3c1",
+      "nameFarm": "Fazenda nova piratininga",
+      "description": "Product Description",
+      "image": "talhao3.jpg",
+      "tillage": "arroz",
+      "plots" : [
+
+      ]
+    },
+    {
+      "id": "1003",
+      "code": "zz21cz3c1",
+      "nameFarm": "Fazenda aegro",
+      "description": "Product Description",
+      "image": "talhao1.jpg",
+      "tillage": "algodão",
+      "plots" : [
+
+      ]
+    },
+    {
+      "id": "1004",
+      "code": "zz21cz3c1",
+      "nameFarm": "Fazenda trade",
+      "description": "Product Description",
+      "image": "talhao3.jpg",
+      "tillage": "eucalipto",
+      "plots" : [
+      ]
+    },
+    {
+      "id": "1005",
+      "code": "zz21cz3c1",
+      "nameFarm": "Fazenda tião",
+      "description": "Product Description",
+      "image": "talhao1.jpg",
+      "tillage": "batata",
+      "plots" : [
+
+      ]
+    }
+  ]
+}
