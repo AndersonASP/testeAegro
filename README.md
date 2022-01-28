@@ -6,7 +6,3 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   1) Clone o projeto e rode o comando `npm install` para baixar as bibliotecas ultilizadas.
   2) Subir o servidor ultilizando o comando `ng serve`. Caso a porta padrão esteja em uso basta usar a flag `--port` ex: `ng serve --port 4600`
   
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
