@@ -60,7 +60,7 @@ export class TalhoesComponent extends Utils implements OnInit {
       namePlots: new FormControl('', Validators.required),
       areaPlots: new FormControl(null, [Validators.required]),
       varieties: new FormControl('', [Validators.required]),
-      productivity: new FormControl(null, [Validators.required])
+      productivity: new FormControl(null, [Validators.required]) // evoluir para um FormArray
     });
   }
 
@@ -86,9 +86,18 @@ export class TalhoesComponent extends Utils implements OnInit {
 
   generateProductivityRegisters() {
     return {
+      id: this.randomInteger(0, 60),
       varieties: '',
       area: this.form.get('areaPlots')?.value,
       productivity: this.form.get('productivity')?.value,
     }
+  }
+
+  removeProductivityRegisters(i, plots: any) {
+    const index = this.plots[0].plots[i].productivityRegisters.indexOf(plots);
+    if (index > -1) {
+      this.plots[0].plots[i].productivityRegisters.splice(index, 1);
+    }
+    this.updatePlots();
   }
 }

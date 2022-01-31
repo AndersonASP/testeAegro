@@ -5,17 +5,22 @@
 }
 
 .plots-fields {
-  margin-left: 30px;
+  margin-left: 18%;
   margin-top: 30px;
   display: block;
 }
 
 .title {
-  margin: 30px 15px -20px;
+  margin-top: 30px;
   color: green;
   font-size: 40px;
 }
 
+.title-principal {
+   margin: 30px 15px -20px;
+   color: green;
+   font-size: 40px;
+ }
 .button-talhoes button {
   margin-left: 79.3%;
   margin-top: 1%;
@@ -40,4 +45,7 @@
   color: #48586c;
 }
 
-
+.exclui-talhao {
+  margin-left: 99%;
+  bottom: 145px;
+}
